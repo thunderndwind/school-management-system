@@ -1,0 +1,6 @@
+# services.yaml
+postgresql:
+    # The name given to the PostgreSQL service
+    type: postgresql:16
+    # Size of the persistent disk for the database (in MB)
+    disk: 256
