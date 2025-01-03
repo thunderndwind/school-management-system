@@ -41,3 +41,8 @@ class UserUpdate(BaseModel):
     email: Optional[EmailStr] = None
     role: Optional[UserRole] = None
     password: Optional[str] = None
+
+
+UserCreate.update_forward_refs()
+UserUpdate.update_forward_refs()
+UserOut.update_forward_refs()
