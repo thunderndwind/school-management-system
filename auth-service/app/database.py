@@ -1,8 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from .config import DATABASE_URL
+# from .config import DATABASE_URL
 
+DATABASE_URL = 'sqlite:////home/app/main_database.db'
 # Create the database engine
 engine = create_engine(DATABASE_URL, echo=True)
 
@@ -14,5 +15,5 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Initialize the database
 def init_db():
-    from .models import User  # Import here to avoid circular import
+    from models import User  # Import here to avoid circular import
     Base.metadata.create_all(bind=engine)

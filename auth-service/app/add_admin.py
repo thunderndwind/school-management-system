@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from app.database import Base
-from app.models import User
-from app.config import DATABASE_URL
+from database import Base
+from models import User
+from config import DATABASE_URL
 from passlib.context import CryptContext
 from sqlalchemy.exc import IntegrityError
 

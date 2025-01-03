@@ -2,9 +2,9 @@ from fastapi import APIRouter, HTTPException, Depends, status
 from sqlalchemy.orm import Session
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
-from ..database import SessionLocal
-from ..models import User
-from app.utils import hash_password, verify_password, create_access_token, create_refresh_token, decode_token, validate_password, verify_role
+from database import SessionLocal
+from models import User
+from utils import hash_password, verify_password, create_access_token, create_refresh_token, decode_token, validate_password, verify_role
 from fastapi_limiter import FastAPILimiter
 from fastapi_limiter.depends import RateLimiter
 import redis.asyncio as redis

@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from jose import JWTError
 from sqlalchemy.orm import Session
-from app.models import User
-from app.schemas import UserCreate, UserUpdate, UserOut
-from app.utils import decode_token, hash_password, verify_role, validate_password
+from models import User
+from schemas import UserCreate, UserUpdate, UserOut
+from utils import decode_token, hash_password, verify_role, validate_password
 from fastapi_limiter.depends import RateLimiter
-from ..database import SessionLocal
+from database import SessionLocal
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 
 router = APIRouter(prefix="/admin")

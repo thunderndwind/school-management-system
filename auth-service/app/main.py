@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from .routes import auth , user_management
-from .database import init_db, SessionLocal
+from routes import auth , user_management
+from database import init_db, SessionLocal
 
 app = FastAPI()
 
